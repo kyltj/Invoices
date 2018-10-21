@@ -1,0 +1,11 @@
+﻿
+<div ng-app="productApp" ng-controller="productCtrl" class="panel panel-primary">
+    <h3 class="panel-heading">Products</h3>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular_resource.js"></script>
+    <script src="~/Scripts/products.js">
+
+    </script>
+    <ng-include src="'home/table'" ng-show="currentView == 'table'"></ng-include>
+    <ng-include src="'home/edit'" ng-show="currentView == 'edit'"></ng-include>
+</div>

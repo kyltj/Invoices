@@ -1,0 +1,33 @@
+﻿<!--Представление для отображения всех данных-->
+<div class="panel-body">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Заметка</th>
+                <th class="text-right">Цена</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in items">
+                <td>{{item.Name}}</td>
+                <td>{{item.Title}}</td>
+                <td class="text-right">{{item.Price}}</td>
+
+                <!-- Кнопки "удалить" и "редактировать" напротив каждой записи в таблице-->
+                <td class="text-center">
+                    <button class="btn btn-xs btn-primary" ng-click="delete(item)">
+                        Удалить
+                    </button>
+                    <button class="btn btn-xs btn-primary" ng-click="editOrCreate(item)">
+                        Редактировать
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button class="btn btn-primary" ng-click="refresh()">Обновить</button>
+        <button class="btn btn-primary" ng-click="editOrCreate()">Добавить</button>
+    </div>
+</div>

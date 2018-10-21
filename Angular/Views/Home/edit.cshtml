@@ -1,0 +1,18 @@
+﻿<!-- Представление для редактирования -->
+<div class="panel-body">
+    <div class="form-group">
+        <label>Имя:</label>
+        <input class="form-control" ng-model="currentItem.name" />
+    </div>
+    <div class="form-group">
+        <label>Цена:</label>
+        <input class="form-control" ng-model="currentItem.price" />
+    </div>
+    <div class="form-group">
+        <label>Заметка:</label>
+        <input class="form-control" ng-model="currentItem.title" />
+    </div>
+
+    <button class="btn btn-primary" ng-click="saveEdit(currentItem)">Сохранить</button> <!--Сохранение изменений-->
+    <button class="btn btn-primary" ng-click="cancelEdit()">Отменить</button> <!--Отмена правок-->
+</div>
